@@ -1,0 +1,83 @@
+
+.legend {
+    padding-left: 18px;
+}
+.x-tree-elbow, .x-tree-elbow-end {
+    width: 3px !important;
+}
+.gx-tree-layer-icon {
+    display: none !important;
+}
+
+.close {
+    background-image: url( ../images/default/close.png ) !important;
+}
+
+.save {
+
+    background-image: url( ../images/default/save.png ) !important;
+}
+
+.analisis {
+    background-image: url( ../images/default/analisis.png ) !important;
+}
+
+.hitung {
+    background-image: url( ../images/default/hitung.png ) !important;
+}
+
+.chart {
+    background-image: url( ../images/default/chart.png ) !important;
+}
+
+.add {
+    background-image: url( ../images/default/add.png ) !important;
+}
+
+.edit {
+    background-image: url( ../images/default/modify.png ) !important;
+}
+
+.delete {
+    background-image: url( ../images/default/delete.png ) !important;
+}
+
+.zoomextent {
+    background-image: url( ../images/default/zoomextent.png ) !important;
+}
+
+.zoomin {
+    background-image: url( ../images/default/zoomin.png ) !important;
+}
+
+.zoomout {
+    background-image: url( ../images/default/zoomout.png ) !important;
+}
+
+.zoomlast {
+    background-image: url( ../images/default/zoomlast.png ) !important;
+}
+
+.zoomnext {
+    background-image: url( ../images/default/zoomnext.png ) !important;
+}
+
+.pan {
+    background-image: url( ../images/default/pan.png ) !important;
+}
+
+.info {
+    background-image: url( ../images/default/info.png ) !important;
+}
+
+.refresh {
+    background-image: url( ../images/default/refresh.png ) !important;
+}
+
+.zoombox {
+    background-image: url( ../images/default/zoombox.png ) !important;
+}
+
+.measure {
+    background-image: url( ../images/default/measure.png ) !important;
+}

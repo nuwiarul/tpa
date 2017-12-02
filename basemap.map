@@ -1,0 +1,133 @@
+# Map file created from QGIS project file C:/ms4w/apps/qgis.qgs
+# Edit this file to customize for your map interface
+# (Created with PyQgis MapServer Export plugin)
+MAP
+  NAME "QGIS-MAP"
+  # Map image size
+  SIZE 600 600
+  UNITS dd
+
+  EXTENT 114.193699 -8.868304 115.949080 -8.041324
+  #EXTENT       95.188034 -10.933862 141.007187 6.966667
+  #FONTSET './fonts/fonts.txt'
+  #SYMBOLSET './symbols/symbols.txt'
+  PROJECTION
+    'proj=longlat'
+    'ellps=WGS84'
+    'datum=WGS84'
+    'no_defs'
+  END
+
+  # Background color for the map canvas -- change as desired
+  IMAGECOLOR 255 255 255
+  IMAGEQUALITY 95
+  IMAGETYPE agg
+
+  OUTPUTFORMAT
+    NAME agg
+    DRIVER AGG/PNG
+    IMAGEMODE RGB
+  END
+  # Legend
+  LEGEND
+      IMAGECOLOR 255 255 255
+    STATUS ON
+    KEYSIZE 18 12
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+  END
+
+  # Web interface definition. Only the template parameter
+  # is required to display a map. See MapServer documentation
+  WEB
+    # Set IMAGEPATH to the path where MapServer should
+    # write its output.
+    IMAGEPATH 'c:\ms4w\Apache\htdocs\data'
+
+    # Set IMAGEURL to the url that points to IMAGEPATH
+    # as defined in your web server configuration
+    IMAGEURL 'data/'
+
+    # WMS server settings
+    METADATA
+      'ows_title'           'QGIS-MAP'
+      'ows_onlineresource'  'http://localhost/cgi-bin/mapserv.exe?map=/ms4w/apps/crime/map/basemap.map&'
+      'ows_srs'             'EPSG:4326'
+    END
+
+    #Scale range at which web interface will operate
+    # Template and header/footer settings
+    # Only the template parameter is required to display a map. See MapServer documentation
+    TEMPLATE 'fooOnlyForWMSGetFeatureInfo'
+  END
+
+  
+
+
+
+#BASEMAP
+
+LAYER
+    NAME 'bali'
+    TYPE POLYGON
+    DUMP true
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    EXTENT 114.193699 -8.868304 115.949080 -8.041324
+    CONNECTIONTYPE postgis
+    CONNECTION "dbname='tpa' host=localhost port=5432 user='postgis' password='postgis' sslmode=disable"
+    DATA 'the_geom FROM "bali" USING UNIQUE gid USING srid=-1'
+    METADATA
+      'ows_title' 'Indonesia'
+    END
+    STATUS OFF
+    TRANSPARENCY 100
+    PROJECTION
+    'proj=longlat'
+    'ellps=WGS84'
+    'datum=WGS84'
+    'no_defs'
+    END
+    CLASS
+       NAME 'Indonesia'
+       STYLE
+         WIDTH 1
+         OUTLINECOLOR 0 0 0
+         COLOR 1 144 50
+       END
+    END
+  END
+
+LAYER
+    NAME 'jembrana'
+    TYPE POLYGON
+    DUMP true
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    EXTENT 114.193699 -8.868304 115.949080 -8.041324
+    CONNECTIONTYPE postgis
+    CONNECTION "dbname='db_crime' host=localhost port=5432 user='postgis' password='postgis' sslmode=disable"
+    DATA 'the_geom FROM "jembrana" USING UNIQUE gid USING srid=-1'
+    METADATA
+      'ows_title' 'Indonesia'
+    END
+    STATUS OFF
+    TRANSPARENCY 100
+    PROJECTION
+    'proj=longlat'
+    'ellps=WGS84'
+    'datum=WGS84'
+    'no_defs'
+    END
+    CLASS
+       NAME 'Indonesia'
+       STYLE
+         WIDTH 1
+         OUTLINECOLOR 0 0 0
+         COLOR 170 255 0
+       END
+    END
+  END
+
+END
