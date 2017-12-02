@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-$host = "crunchy-postgres-gis-tpa.a3c1.starter-us-west-1.openshiftapps.com";
+$host = "crunchy-postgres-gis.tpa.svc";
 $user = "postgis";
 $pass = "postgis";
 $dbname = "tpa";
