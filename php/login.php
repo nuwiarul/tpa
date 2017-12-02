@@ -19,7 +19,7 @@ $nbrows = pg_num_rows($result);
 
 if ($nbrows > 0) {
     $row = pg_fetch_array($result);
-    session_register("user_login");
+    //session_register("user_login");
 
     $_SESSION['user_login'] = $row['user_login'];
 
