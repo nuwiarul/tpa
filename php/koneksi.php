@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-$host = "localhost";
+$host = "127.0.0.1";
 $user = "postgis";
 $pass = "postgis";
 $dbname = "tpa";
